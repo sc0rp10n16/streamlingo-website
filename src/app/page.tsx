@@ -9,7 +9,7 @@ import animationData from "@/components/voiceAi.json";
 import Lottie from "lottie-react";
 import { useMutation } from "convex/react";
 import { api } from "../../convex/_generated/api";
-import { Instagram, LinkedinIcon, XIcon, XSquareIcon } from "lucide-react";
+import { Instagram, LinkedinIcon } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -59,7 +59,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="min-h-screen flex items-center justify-center">
+    <main className="min-h-screen flex flex-col items-center justify-center p-4 md:p-8">
       <div
         className={cn(
           "fixed inset-0 transition-colors delay-100 duration-700 opacity-25",
@@ -92,13 +92,13 @@ export default function Home() {
         }}
       />
 
-      <div className="max-w-3xl mt-10">
-        <div className="h-full w-full bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100">
+      <div className="max-w-3xl mt-10 w-full">
+        <div className="h-full w-full bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100 p-4 sm:p-8">
           <Lottie animationData={animationData} />
         </div>
         <div className="flex flex-col items-center relative z-10">
           <h1
-            className={`text-7xl max-w-3xl text-white text-center leading-snug mb-12 ${poppins.className}`}
+            className={`text-3xl sm:text-5xl md:text-7xl max-w-3xl text-white text-center leading-snug mb-6 sm:mb-8 md:mb-12 ${poppins.className}`}
           >
             Revolutionize Your Meetings with{" "}
             <span
@@ -117,28 +117,29 @@ export default function Home() {
               StreamLingo VoiceSync
             </span>{" "}
           </h1>
-          <p className="text-gray-300 mb-8 text-2xl items-center justify-center text-center">
+          <p className="text-gray-300 mb-4 sm:mb-6 md:mb-8 text-lg sm:text-xl md:text-2xl text-center">
             Experience seamless communication, real-time translations, and
             powerful AI tools.
           </p>
-          <p className="text-gray-300 mb-8 text-2xl items-center justify-center text-center">
+          <p className="text-gray-300 mb-4 sm:mb-6 md:mb-8 text-lg sm:text-xl md:text-2xl text-center">
             StreamLingo VoiceSync transforms your online meetings with advanced
             features like real-time language translations, interactive
             AI-powered tools, attendance tracking, and superior voice clarity.
             Join our waitlist to be the first to experience the future of
-            business
+            business communication.
           </p>
-          <div className="mb-8">
+          <div className="mb-4 sm:mb-6 md:mb-8 w-full">
             <form
               id="waitlistForm"
               onSubmit={(e) => {
                 createWaitlist({ email });
                 e.preventDefault();
               }}
+              className="flex flex-col items-center w-full sm:flex-row sm:justify-center"
             >
               <input
                 className={cn(
-                  "text-gray-500 text-2xl bg-gray-900 flex-1 py-2.5  outline-none border bg-opacity-20 shadow-md placeholder:text-neutral-500 pl-5 rounded-lg mr-2",
+                  "text-gray-500 text-lg sm:text-xl md:text-2xl bg-gray-900 flex-1 py-2.5 outline-none border bg-opacity-20 shadow-md placeholder:text-neutral-500 pl-5 rounded-lg mb-4 sm:mb-0 sm:mr-2",
                   {
                     "border-purple-300": currentFramework === "qwik",
                     "border-sky-300": currentFramework === "safari",
@@ -158,10 +159,10 @@ export default function Home() {
                 }}
               />
               <Dialog>
-                <DialogTrigger>
+                <DialogTrigger asChild>
                   <button
                     className={cn(
-                      "text-black text-2xl px-6 py-3 rounded-md font-semibold transition-colors duration-200",
+                      "text-black text-lg sm:text-xl md:text-2xl px-6 py-3 rounded-md font-semibold transition-colors duration-200",
                       {
                         "bg-purple-300": currentFramework === "qwik",
                         "bg-sky-300": currentFramework === "safari",
@@ -178,16 +179,15 @@ export default function Home() {
                     Join waitlist
                   </button>
                 </DialogTrigger>
-                <DialogContent className="bg-gray-900 text-gray-300">
+                <DialogContent className="bg-gray-900 text-gray-300 max-w-lg mx-auto p-6 rounded-lg">
                   <DialogHeader>
-                    <DialogTitle className="text-gray-300 mb-8 text-center font-bold text-3xl">
-                      Thank you joining the waitlist
+                    <DialogTitle className="text-gray-300 mb-4 text-center font-bold text-2xl">
+                      Thank you for joining the waitlist!
                     </DialogTitle>
-                    <DialogDescription className="px-4 text-center text-2xl">
-                      Thank you for joining the StreamLingo VoiceSync waitlist!
-                      {"we're"} thrilled to have you on board. Keep an eye on
-                      your inbox for exclusive updates, sneak peeks, and early
-                      access to our groundbreaking platform.
+                    <DialogDescription className="px-4 text-center text-lg">
+                      We're thrilled to have you on board. Keep an eye on your
+                      inbox for exclusive updates, sneak peeks, and early access
+                      to our groundbreaking platform.
                     </DialogDescription>
                   </DialogHeader>
                 </DialogContent>
@@ -195,15 +195,12 @@ export default function Home() {
             </form>
           </div>
           <div className="items-center justify-center text-center">
-            <p className="text-center text-gray-200 text-3xl font-bold mb-4 mt-8">
+            <p className="text-center text-gray-200 text-xl sm:text-2xl md:text-3xl font-bold mb-4 mt-8">
               Follow us to stay updated
             </p>
-            <div className="mb-8 flex items-center text-center justify-center text-gray-400 gap-5">
+            <div className="mb-4 sm:mb-6 md:mb-8 flex items-center text-center justify-center text-gray-400 gap-5">
               <Link href="https://www.instagram.com/oscowl_/?hl=en">
-                <Instagram
-                  className=" text-3xl hover:text-pink-600"
-                  size={30}
-                />
+                <Instagram className="text-3xl hover:text-pink-600" size={30} />
               </Link>
               <Link href="https://in.linkedin.com/company/oscowl">
                 <LinkedinIcon
@@ -216,7 +213,7 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className="bottom-0 min-w-fit rounded w-full text-gray-500 text-center text-2xl mb-4 ml-2 p-5">
+          <div className="bottom-0 w-full text-gray-500 text-center text-lg sm:text-xl md:text-2xl mb-4 p-5">
             © 2024 <Link href="https://www.oscowl.in/">OSCOWL™</Link>. All
             Rights Reserved.
           </div>
