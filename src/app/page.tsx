@@ -27,6 +27,13 @@ const poppins = Poppins({
 });
 
 export default function Home() {
+  const [docEnv, setDocEnv] = useState(false);
+
+  useEffect(() => {
+    if (typeof document !== "undefined") {
+      setDocEnv(true);
+    }
+  }, []);
   const createWaitlist = useMutation(api.waitlists.createWaitlist);
 
   const [currentFramework, setCurrentFramework] = useState<Framework>(
@@ -119,7 +126,7 @@ export default function Home() {
             features like real-time language translations, interactive
             AI-powered tools, attendance tracking, and superior voice clarity.
             Join our waitlist to be the first to experience the future of
-            business communication.
+            business
           </p>
           <div className="mb-8">
             <form
