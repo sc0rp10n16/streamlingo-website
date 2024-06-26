@@ -185,9 +185,9 @@ export default function Home() {
                     </DialogTitle>
                     <DialogDescription className="px-4 text-center text-2xl">
                       Thank you for joining the StreamLingo VoiceSync waitlist!
-                      We're thrilled to have you on board. Keep an eye on your
-                      inbox for exclusive updates, sneak peeks, and early access
-                      to our groundbreaking platform.
+                      {"we're"} thrilled to have you on board. Keep an eye on
+                      your inbox for exclusive updates, sneak peeks, and early
+                      access to our groundbreaking platform.
                     </DialogDescription>
                   </DialogHeader>
                 </DialogContent>
