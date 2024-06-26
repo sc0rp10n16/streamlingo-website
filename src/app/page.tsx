@@ -185,9 +185,9 @@ export default function Home() {
                       Thank you for joining the waitlist!
                     </DialogTitle>
                     <DialogDescription className="px-4 text-center text-lg">
-                      We're thrilled to have you on board. Keep an eye on your
-                      inbox for exclusive updates, sneak peeks, and early access
-                      to our groundbreaking platform.
+                      {"We're"} thrilled to have you on board. Keep an eye on
+                      your inbox for exclusive updates, sneak peeks, and early
+                      access to our groundbreaking platform.
                     </DialogDescription>
                   </DialogHeader>
                 </DialogContent>
