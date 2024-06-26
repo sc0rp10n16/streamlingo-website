@@ -161,6 +161,7 @@ export default function Home() {
               <Dialog>
                 <DialogTrigger asChild>
                   <button
+                    type="submit"
                     className={cn(
                       "text-black text-lg sm:text-xl md:text-2xl px-6 py-3 rounded-md font-semibold transition-colors duration-200",
                       {
