@@ -62,7 +62,7 @@ export default function Home() {
     <main className="min-h-screen flex flex-col items-center justify-center p-4 md:p-8">
       <div
         className={cn(
-          "fixed inset-0 transition-colors delay-100 duration-700 opacity-25",
+          "fixed inset-0 transition-colors delay-100 duration-700 opacity-50",
           {
             "bg-purple-300": currentFramework === "qwik",
             "bg-sky-300": currentFramework === "safari",
@@ -93,10 +93,10 @@ export default function Home() {
       />
 
       <div className="max-w-3xl mt-10 w-full">
-        <div className="h-full w-full p-4 sm:p-8">
-          <Lottie animationData={animationData} />
-        </div>
-        <div className="flex flex-col items-center relative z-10">
+        {/* <div className="h-full justify-center items-center w-full font-bold p-4 sm:p-8">
+          <Lottie animationData={animationData}  style={{  }} />
+        </div> */}
+        <div className="flex flex-col items-center mt-20 relative z-10">
           <h1
             className={`text-3xl sm:text-5xl md:text-7xl max-w-3xl text-white text-center leading-snug mb-6 sm:mb-8 md:mb-12 ${poppins.className}`}
           >
@@ -128,6 +128,9 @@ export default function Home() {
             Join our waitlist to be the first to experience the future of
             business communication.
           </p>
+          <div className="h-full justify-center items-center w-full font-bold p-4 sm:p-8">
+          <Lottie animationData={animationData}  style={{  }} />
+        </div>
           <div className="mb-4 sm:mb-6 md:mb-8 w-full">
             <form
               id="waitlistForm"
@@ -195,6 +198,9 @@ export default function Home() {
               </Dialog>
             </form>
           </div>
+          {/* <div className="h-full justify-center items-center w-full font-bold p-4 sm:p-8">
+          <Lottie animationData={animationData}  style={{  }} />
+        </div> */}
           <div className="items-center justify-center text-center">
             <p className="text-center text-gray-200 text-xl sm:text-2xl md:text-3xl font-bold mb-4 mt-8">
               Follow us to stay updated
