@@ -93,7 +93,7 @@ export default function Home() {
       />
 
       <div className="max-w-3xl mt-10 w-full">
-        <div className="h-full w-full bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100 p-4 sm:p-8">
+        <div className="h-full w-full p-4 sm:p-8">
           <Lottie animationData={animationData} />
         </div>
         <div className="flex flex-col items-center relative z-10">
