@@ -93,9 +93,9 @@ export default function Home() {
       />
 
       <div className="max-w-3xl mt-10 w-full">
-        {/* <div className="h-full justify-center items-center w-full font-bold p-4 sm:p-8">
+        <div className="h-full justify-center items-center w-full font-bold p-4 sm:p-8">
           <Lottie animationData={animationData}  style={{  }} />
-        </div> */}
+        </div>
         <div className="flex flex-col items-center mt-20 relative z-10">
           <h1
             className={`text-3xl sm:text-5xl md:text-7xl max-w-3xl text-white text-center leading-snug mb-6 sm:mb-8 md:mb-12 ${poppins.className}`}
@@ -128,9 +128,9 @@ export default function Home() {
             Join our waitlist to be the first to experience the future of
             business communication.
           </p>
-          <div className="h-full justify-center items-center w-full font-bold p-4 sm:p-8">
+          {/* <div className="h-full justify-center items-center w-full font-bold p-4 sm:p-8">
           <Lottie animationData={animationData}  style={{  }} />
-        </div>
+        </div> */}
           <div className="mb-4 sm:mb-6 md:mb-8 w-full">
             <form
               id="waitlistForm"
