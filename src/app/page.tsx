@@ -62,7 +62,7 @@ export default function Home() {
     <main className="min-h-screen flex flex-col items-center justify-center p-4 md:p-8">
       <div
         className={cn(
-          "fixed inset-0 transition-colors delay-100 duration-700 opacity-50",
+          "fixed inset-0 transition-colors delay-100 duration-700 opacity-100",
           {
             "bg-purple-300": currentFramework === "qwik",
             "bg-sky-300": currentFramework === "safari",
@@ -93,7 +93,7 @@ export default function Home() {
       />
 
       <div className="max-w-3xl mt-10 w-full">
-        <div className="h-full justify-center items-center w-full font-bold p-4 sm:p-8">
+        <div className="h-full lg:min-h-screen justify-center items-center w-full font-bold p-4 sm:p-8">
           <Lottie animationData={animationData}  style={{  }} />
         </div>
         <div className="flex flex-col items-center mt-20 relative z-10">
