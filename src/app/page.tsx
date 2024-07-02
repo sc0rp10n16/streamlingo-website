@@ -59,7 +59,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center p-4 md:p-8">
+    <main className="min-h-screen flex flex-col items-center justify-center p-4 md:p-8 no-scrollbar">
       <div
         className={cn(
           "fixed inset-0 transition-colors delay-100 duration-700 opacity-100",
