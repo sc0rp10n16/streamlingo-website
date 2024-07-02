@@ -84,13 +84,13 @@ export default function Home() {
         className="fixed inset-0 w-screen h-screen object-cover"
         src={assets.gradient}
       />
-      <div
+      {/* <div
         className="fixed inset-0 opacity-30"
         style={{
           backgroundImage: `url(${assets.square})`,
           backgroundSize: "30px",
         }}
-      />
+      /> */}
 
       <div className="max-w-3xl mt-10 w-full">
         <div className="h-full lg:min-h-screen justify-center items-center w-full font-bold p-4 sm:p-8">
@@ -114,20 +114,20 @@ export default function Home() {
                 "text-neutral-300": currentFramework === "desktop",
               })}
             >
-              StreamLingo VoiceSync
+              StreamLingo
             </span>{" "}
           </h1>
           <p className="text-gray-300 mb-4 sm:mb-6 md:mb-8 text-lg sm:text-xl md:text-2xl text-center">
             Experience seamless communication, real-time translations, and
             powerful AI tools.
           </p>
-          <p className="text-gray-300 mb-4 sm:mb-6 md:mb-8 text-lg sm:text-xl md:text-2xl text-center">
+          {/* <p className="text-gray-300 mb-4 sm:mb-6 md:mb-8 text-lg sm:text-xl md:text-2xl text-center">
             StreamLingo VoiceSync transforms your online meetings with advanced
             features like real-time language translations, interactive
             AI-powered tools, attendance tracking, and superior voice clarity.
             Join our waitlist to be the first to experience the future of
             business communication.
-          </p>
+          </p> */}
           {/* <div className="h-full justify-center items-center w-full font-bold p-4 sm:p-8">
           <Lottie animationData={animationData}  style={{  }} />
         </div> */}
