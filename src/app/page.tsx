@@ -20,6 +20,7 @@ import {
 } from "@/components/ui/dialog";
 import Link from "next/link";
 import { FaXTwitter } from "react-icons/fa6";
+import { User } from "@clerk/nextjs/server";
 
 const poppins = Poppins({
   weight: "700",
@@ -131,40 +132,12 @@ export default function Home() {
           {/* <div className="h-full justify-center items-center w-full font-bold p-4 sm:p-8">
           <Lottie animationData={animationData}  style={{  }} />
         </div> */}
-          <div className="mb-4 sm:mb-6 md:mb-8 w-full">
-            <form
-              id="waitlistForm"
-              onSubmit={(e) => {
-                createWaitlist({ email });
-                e.preventDefault();
-              }}
-              className="flex flex-col items-center w-full sm:flex-row sm:justify-center"
-            >
-              <input
-                className={cn(
-                  "text-gray-500 text-lg sm:text-xl md:text-2xl bg-gray-900 flex-1 py-2.5 outline-none border bg-opacity-20 shadow-md placeholder:text-neutral-500 pl-5 rounded-lg mb-4 sm:mb-0 sm:mr-2",
-                  {
-                    "border-purple-300": currentFramework === "qwik",
-                    "border-sky-300": currentFramework === "safari",
-                    "border-yellow-300": currentFramework === "chrome",
-                    "border-teal-300": currentFramework === "tailwind",
-                    "border-blue-300": currentFramework === "react",
-                    "border-green-300": currentFramework === "vue",
-                    "border-orange-400": currentFramework === "svelte",
-                    "border-red-300": currentFramework === "mobile",
-                    "border-neutral-300": currentFramework === "desktop",
-                  },
-                )}
-                value={email}
-                placeholder="Enter your Email"
-                onChange={(e) => {
-                  setEmail(e.target.value);
-                }}
-              />
-              <Dialog>
-                <DialogTrigger asChild>
+          <div className="mb-4 sm:mb-6 md:mb-8 w-full flex item-center justify-center">
+            
+              
+             
                   <button
-                    type="submit"
+                    
                     className={cn(
                       "text-black text-lg sm:text-xl md:text-2xl px-6 py-3 rounded-md font-semibold transition-colors duration-200",
                       {
@@ -180,23 +153,10 @@ export default function Home() {
                       },
                     )}
                   >
-                    Join waitlist
+                    <Link href="/Recordings">Get Started</Link>
                   </button>
-                </DialogTrigger>
-                <DialogContent className="bg-gray-900 text-gray-300 max-w-lg mx-auto p-6 rounded-lg">
-                  <DialogHeader>
-                    <DialogTitle className="text-gray-300 mb-4 text-center font-bold text-2xl">
-                      Thank you for joining the waitlist!
-                    </DialogTitle>
-                    <DialogDescription className="px-4 text-center text-lg">
-                      {"We're"} thrilled to have you on board. Keep an eye on
-                      your inbox for exclusive updates, sneak peeks, and early
-                      access to our groundbreaking platform.
-                    </DialogDescription>
-                  </DialogHeader>
-                </DialogContent>
-              </Dialog>
-            </form>
+                
+
           </div>
           {/* <div className="h-full justify-center items-center w-full font-bold p-4 sm:p-8">
           <Lottie animationData={animationData}  style={{  }} />
