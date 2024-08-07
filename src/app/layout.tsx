@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import ConvexClientProvider from "./ConvexClientProvider";
+import { ClerkProvider } from "@clerk/nextjs";
 
 export const metadata: Metadata = {
   title: "Streamlingo Voicesync",
@@ -16,7 +17,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <ConvexClientProvider>{children}</ConvexClientProvider>
+        
+        <ConvexClientProvider>
+          <ClerkProvider>
+            {children}
+          </ClerkProvider>
+        </ConvexClientProvider>
+        
       </body>
     </html>
   );
