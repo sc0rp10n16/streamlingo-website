@@ -1,6 +1,8 @@
 function RecordingsPage() {
   return (
-    <div>RecordingsPage</div>
+    <div>
+      Record your voice here
+    </div>
   )
 }
 export default RecordingsPage
